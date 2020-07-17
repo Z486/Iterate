@@ -1,14 +1,11 @@
 var btn = document.getElementById("submit");
 var input = document.getElementById("text");
 var textTyped = document.getElementById("textTyped")
-//clears the input
-var clear = input.value = ""
 
-enter.addEventListener("click", enterPressed);
-//when btn is clicked, the fcntion countodown begins
+//when btn is clicked, the function countdown begins
 btn.addEventListener("click", startCountdown);
-//the function countDown decrements the variable time by 1
-//until it reaches 0
+
+//the function countDown decrements the variable time by 1 until it =0
 var number=5;
 function countDown(){
 	if (number===-1){
@@ -34,8 +31,8 @@ function userInput(){
 window.addEventListener("keydown", checkKeyPressed, false);
 
 function checkKeyPressed(evt) {
-	if (evt.keyCode ==89) {
-		clear
+	if (evt.keyCode == "89") {
+		input.value = "iterate"
 	}
 
 }
