@@ -1,44 +1,49 @@
 var btn = document.getElementById("submit");
 var input = document.getElementById("text");
-//global context
-var timer= setInterval(countDown,1000);
-var number=5;
-//local 
-btn.addEventListener("click", countDown);
+var textTyped = document.getElementById("textTyped")
+var enter = document.getElementById("enter")
+
+enter.addEventListener
+//when btn is clicked, the fcntion countodown begins
+btn.addEventListener("click", startCountdown);
 //the function countDown decrements the variable time by 1
-//ntil it reaches 0
+//until it reaches 0
+var number=5;
 function countDown(){
-	if (number===0){
+	if (number===-1){
 		clearInterval();
 	}
 	else {
-		number--;
 		document.getElementById("number").innerHTML=number;
+		number--;
 	}
 }
-
-
-function thisTextOnly() {
-	if (input.value == "iterate quickly"){
-		return true;
-	}
-
-	else {
-		alert("Please check your submission and try again");
-		return false;
-	}
+//the fuunction starts the countdown
+function startCountdown(){
+	var timer= setInterval(countDown,1000);
 }
 
+//displays user input on the screen immediately after text has been typed
+function userInput(){
+	var x = input.value;
+
+	textTyped.innerHTML = x
+}
+
+// const Action = {
+// 	enterPressed() = //serinput si reset
+
+// }
 
 
 
-// thisTextOnly();
-// //call thisTextOnly to validate onsubmit after submit is pressed
-// //I need to figure ou thow to track time
-// //add event listener and reand through docs
-// set interval set time out
-// let counter = 10;
-// setInterval should have a function and a time in ms
-// setInterval( function(){
+// function thisTextOnly() {
+// 	if (input.value == "iterate quickly"){
+// 		return true;
+// 	}
 
-// })
+// 	else {
+// 		alert("Please check your submission and try again");
+// 		return false;
+// 	}
+// }
