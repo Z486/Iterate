@@ -1,9 +1,10 @@
 var btn = document.getElementById("submit");
 var input = document.getElementById("text");
 var textTyped = document.getElementById("textTyped")
-var enter = document.getElementById("enter")
+//clears the input
+var clear = input.value = ""
 
-enter.addEventListener
+enter.addEventListener("click", enterPressed);
 //when btn is clicked, the fcntion countodown begins
 btn.addEventListener("click", startCountdown);
 //the function countDown decrements the variable time by 1
@@ -30,11 +31,21 @@ function userInput(){
 	textTyped.innerHTML = x
 }
 
+window.addEventListener("keydown", checkKeyPressed, false);
+
+function checkKeyPressed(evt) {
+	if (evt.keyCode ==89) {
+		clear
+	}
+
+}
+//object literal list; input clear after pressing y
 // const Action = {
-// 	enterPressed() = //serinput si reset
-
-// }
-
+// 	yPressed() {console.log("clear");}
+// };
+// const keyAction = {
+// 	y: {keydown: Action.yPressed}
+// };
 
 
 // function thisTextOnly() {
