@@ -32,7 +32,7 @@ window.addEventListener("keydown", checkKeyPressed, false);
 
 function checkKeyPressed(evt) {
 	if (evt.keyCode == "89") {
-		input.value = "iterate"
+		input.value = " "
 	}
 
 }
