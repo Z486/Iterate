@@ -4,8 +4,9 @@ var input = document.getElementById("text");
 var timer= setInterval(countDown,1000);
 var number=5;
 //local 
-timer.addEventListener("click", countDown);
-
+btn.addEventListener("click", countDown);
+//the function countDown decrements the variable time by 1
+//ntil it reaches 0
 function countDown(){
 	if (number===0){
 		clearInterval();
