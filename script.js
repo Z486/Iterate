@@ -8,24 +8,22 @@ var add1 = document.getElementById("pointshere")
 btn.addEventListener("click", startCountdown);
 input.addEventListener("input", userInput);
 
-//the function countDown decrements the variable time by 1 until it =0
+//the function countDown decrements the variable time by 1 until it = 0
+//textarea is disabled until time = 0
 var number=5;
+input.disabled = true;
 function countDown(){
-	if (number===-1){
+	if (number===-2){
 		clearInterval();
 	}
-	else {
+	else if (number !==-1) {
 		document.getElementById("number").innerHTML=number;
 		number--;
 	}
+	else if (number ==-1){
+		input.disabled = false;
+	}
 }
-//restricts user input if countdown is over 0
-// function restrictInput(){
-// 	if (number >= 1){
-// 	input.onkeydown= return false
-// }
-// }
-
 
 //the fuunction starts the countdown
 function startCountdown(){
