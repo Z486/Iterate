@@ -12,11 +12,17 @@ function countDown(){
 	if (number===-1){
 		clearInterval();
 	}
-	else {
+	else if (number === 1 || number === 2 || number === 3 || number === 4 || number === 5){
+	onkeydown = "return false;"
+}
+	else if{
 		document.getElementById("number").innerHTML=number;
 		number--;
 	}
 }
+
+
+
 //the fuunction starts the countdown
 function startCountdown(){
 	var timer= setInterval(countDown,1000);
@@ -28,28 +34,33 @@ function userInput(){
 	var x = input.value;
 
 	textTyped.innerHTML = x;
+	points()
 	clear()
 	}
 
 //clears input after iterate quickly has been typed
 function clear(){
 	if (input.value == "iterate quickly"){
-		input.value = ""
-		for(add1 = 0; add1 > -1; add1++){
-			add1.innerHTML
-		}
+		input.value = "";
 	}
 }
-
-
-
-// function thisTextOnly() {
-// 	if (input.value == "iterate quickly"){
-// 		return true;
-// 	}
-
-// 	else {
-// 		alert("Please check your submission and try again");
-// 		return false;
-// 	}
-// }
+//adds a point each time iterate quickly is correctly typed
+//else if statements allwo for a better user experience
+var anotherNumber = 1
+function points(){
+	if (input.value == "iterate quickly"){
+		add1.innerHTML = anotherNumber;
+		anotherNumber++}
+	else if (input.value == " iterate quickly"){
+		alert("There may be (a) blank space(s) before your input. Please refresh the page and try again.")
+	}
+	else if (input.value == "  iterate quickly"){
+		alert("There may be (a) blank space(s) before your input. Please refresh the page and try again.")
+	}
+	else if (input.value == "   iterate quickly"){
+		alert("There may be (a) blank space(s) before your input. Please refresh the page and try again.")
+	}
+	else if (input.value == "    iterate quickly"){
+		alert("There may be (a) blank space(s) before your input. Please refresh the page and try again.")
+}
+}
