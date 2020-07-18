@@ -6,6 +6,7 @@ var add1 = document.getElementById("pointshere")
 
 //when btn is clicked, the function countdown begins
 btn.addEventListener("click", startCountdown);
+input.addEventListener("input", userInput);
 
 //the function countDown decrements the variable time by 1 until it =0
 var number=5;
@@ -18,12 +19,12 @@ function countDown(){
 		number--;
 	}
 }
-
-function restrictInput(){
-	if (number < 5){
-	input.onkeydown= "return false;"
-}
-}
+//restricts user input if countdown is over 0
+// function restrictInput(){
+// 	if (number >= 1){
+// 	input.onkeydown= return false
+// }
+// }
 
 
 //the fuunction starts the countdown
