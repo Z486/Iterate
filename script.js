@@ -3,6 +3,7 @@ var input = document.getElementById("text");
 var textTyped = document.getElementById("textTyped")
 var add1 = document.getElementById("pointshere")
 
+
 //when btn is clicked, the function countdown begins
 btn.addEventListener("click", startCountdown);
 
@@ -12,15 +13,17 @@ function countDown(){
 	if (number===-1){
 		clearInterval();
 	}
-	else if (number === 1 || number === 2 || number === 3 || number === 4 || number === 5){
-	onkeydown = "return false;"
-}
-	else if{
+	else {
 		document.getElementById("number").innerHTML=number;
 		number--;
 	}
 }
 
+function restrictInput(){
+	if (number < 5){
+	input.onkeydown= "return false;"
+}
+}
 
 
 //the fuunction starts the countdown
