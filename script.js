@@ -1,3 +1,7 @@
+//to do: active text box immediately after typing
+//fix weird time left bug
+
+
 var btn = document.getElementById("submit");
 var input = document.getElementById("text");
 var textTyped = document.getElementById("textTyped")
@@ -25,6 +29,7 @@ function countDown(){
 		input.disabled = false;
 			startClock()
 	}
+	
 }
 
 //the fuunction starts the countdown
@@ -39,6 +44,7 @@ function countDownAgain(){
 		count--;
 	}
 	else if (count === -1){
+		input.disabled = true;
 		clearInterval()
 	}
 }
