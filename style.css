@@ -1,3 +1,28 @@
-.myFrom{
-	
+body {
+	border: 3px solid black ;
+	border-radius: 40px
+}
+
+.one {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.content {
+	text-align: center;
+}
+
+h3 {
+	transition: ;
+}
+
+#submit {
+	border-radius:5px;
+}
+
+.intervals {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }

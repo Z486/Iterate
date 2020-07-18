@@ -23,7 +23,7 @@ function countDown(){
 	}
 	else if (number ==-1){
 		input.disabled = false;
-		startClock()
+			startClock()
 	}
 }
 
