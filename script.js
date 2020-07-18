@@ -1,6 +1,7 @@
 var btn = document.getElementById("submit");
 var input = document.getElementById("text");
 var textTyped = document.getElementById("textTyped")
+var add1 = document.getElementById("pointshere")
 
 //when btn is clicked, the function countdown begins
 btn.addEventListener("click", startCountdown);
@@ -22,27 +23,24 @@ function startCountdown(){
 }
 
 //displays user input on the screen immediately after text has been typed
+//activates the clear function
 function userInput(){
 	var x = input.value;
 
-	textTyped.innerHTML = x
-}
-
-window.addEventListener("keydown", checkKeyPressed, false);
-
-function checkKeyPressed(evt) {
-	if (evt.keyCode == "89") {
-		input.value = " "
+	textTyped.innerHTML = x;
+	clear()
 	}
 
+//clears input after iterate quickly has been typed
+function clear(){
+	if (input.value == "iterate quickly"){
+		input.value = ""
+		for(add1 = 0; add1 > -1; add1++){
+			add1.innerHTML
+		}
+	}
 }
-//object literal list; input clear after pressing y
-// const Action = {
-// 	yPressed() {console.log("clear");}
-// };
-// const keyAction = {
-// 	y: {keydown: Action.yPressed}
-// };
+
 
 
 // function thisTextOnly() {
