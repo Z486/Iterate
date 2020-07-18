@@ -2,6 +2,7 @@ var btn = document.getElementById("submit");
 var input = document.getElementById("text");
 var textTyped = document.getElementById("textTyped")
 var add1 = document.getElementById("pointshere")
+var timeLeft = document.getElementById("timeLeft")
 
 
 //when btn is clicked, the function countdown begins
@@ -22,13 +23,30 @@ function countDown(){
 	}
 	else if (number ==-1){
 		input.disabled = false;
+		startClock()
 	}
 }
 
 //the fuunction starts the countdown
 function startCountdown(){
-	var timer= setInterval(countDown,1000);
+	var timer= setInterval(countDown, 1000);
 }
+//the function decrements by 1 until it reaches 0
+var count = 60
+function countDownAgain(){
+	if (count !== -1){
+		document.getElementById("timeLeft").innerHTML=count;
+		count--;
+	}
+	else if (count === -1){
+		clearInterval()
+	}
+}
+//starts the countDownAgain function
+function startClock(){
+	var timerAgain = setInterval(countDownAgain, 1000);
+}
+
 
 //displays user input on the screen immediately after text has been typed
 //activates the clear function
