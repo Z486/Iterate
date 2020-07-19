@@ -22,13 +22,13 @@ function countDown(){
 		clearInterval();
 	}
 	else if (number !==-1) {
+		btn.disabled = true;
 		document.getElementById("number").innerHTML=number;
 		number--;
 	}
 	else if (number ==-1){
 		input.disabled = false;
 			startClock()
-		btn.disabled = true;
 	}
 	
 }
