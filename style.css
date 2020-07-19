@@ -1,6 +1,19 @@
 body {
-	border: 3px solid black ;
+	border: 100px solid black ;
 	border-radius: 40px
+}
+
+h1 {
+	font-family: 'Notable', sans-serif;
+}
+
+@keyframes opacity {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+#line{
+	animation: opacity 1s infinite;
 }
 
 .one {

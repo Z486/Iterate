@@ -1,5 +1,3 @@
-
-  
 //to do: active text box immediately after typing
 //fix weird time left bug
 
@@ -30,7 +28,9 @@ function countDown(){
 	}
 	else if (number ==-1){
 		input.disabled = false;
+			
 	}
+	
 }
 
 //the fuunction starts the countdown
@@ -44,15 +44,17 @@ function countDownAgain(){
 		document.getElementById("timeLeft").innerHTML=count;
 		count--;
 	}
-	else if (count !== 0){
+	else if (count === -1){
 		input.disabled = true;
 		clearInterval()
 	}
-}	
+}
 //starts the countDownAgain function
-var timerAgain = setInterval(countDownAgain, 1000);
+function startClock(){
+	var timerAgain = setInterval(countDownAgain, 1000);
+}
 
-	
+
 //displays user input on the screen immediately after text has been typed
 //activates the clear function
 function userInput(){
@@ -89,4 +91,3 @@ function points(){
 		alert("There may be (a) blank space(s) before your input. Please refresh the page and try again.")
 }
 }
-
