@@ -28,9 +28,8 @@ function countDown(){
 	}
 	else if (number ==-1){
 		input.disabled = false;
-			startClock()
+		startClock()
 	}
-	
 }
 
 //the fuunction starts the countdown
@@ -40,12 +39,13 @@ function startCountdown(){
 //the function decrements by 1 until it reaches 0
 var count = 60
 function countDownAgain(){
-	if (count !== -1){
+	if (count > -1){
 		document.getElementById("timeLeft").innerHTML=count;
 		count--;
 	}
-	else if (count === -1){
+	else {
 		input.disabled = true;
+		input.focus()
 		clearInterval()
 	}
 }
